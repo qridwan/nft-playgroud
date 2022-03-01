@@ -12,22 +12,23 @@ module.exports = {
     },
 
     fontFamily: {
-      body: ["Mukta", "sans-serif"],
-      display: ["Roboto", "sans-serif"],
+      body: ["DM Sans", "sans-serif"],
+      display: ["DM Sans", "sans-serif"],
+      caps: ["Archivo Black", "sans-serif"],
     },
     extend: {
       boxShadow: {
         xsm: "0px 10px 20px rgba(196, 196, 196, 0.15)",
       },
       colors: {
-        indigo: "#45028D",
-        lemon: "#66DE7D",
-        orange: "#ED5656",
-        black: "#14171A",
+        indigo: "#3D00B7",
+        gray: "#757575",
         dark: "#272D33",
-        gray: "#5D6267",
-        light: "#E5E5E5",
-        warm: "#FAFAFA",
+        lemon: "#14C8B0",
+        red: "#FF002E",
+        blue: "#2639ED",
+        light_blue: "#1E93FF",
+        light: "#C4C4C4",
         white: "#FFFFFF",
       },
       spacing: {
@@ -42,7 +43,6 @@ module.exports = {
         sm: ".875rem",
         tiny: ".875rem",
         p: "1.125rem",
-        
       },
     },
   },
