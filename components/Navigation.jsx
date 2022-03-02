@@ -2,24 +2,26 @@ import react, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { classNames } from "../helper/classNames";
+import Button from "./atoms/Button";
+import SearchBar from "./atoms/SearchBar";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
-  { name: "Reports", href: "#", current: false },
+  { name: "Marketplace", href: "", current: false },
+  { name: "Resource", href: "", current: false },
+  { name: "About", href: "", current: false },
 ];
 export default function Navigation() {
   return (
-    <div className="">
+    <div className="md:max-w-8xl mx-10 md:mx-20 md:px-4 my-4">
       <Disclosure as="nav" className="bg-gray-800">
         {({ open }) => (
           <>
-            <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto ">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
-                  <div className="flex-shrink-0">NFTERS</div>
+                  <div className="flex-shrink-0 font-caps text-indigo text-h4">
+                    NFTERS
+                  </div>
                   <div className="hidden md:block">
                     <div className="ml-10 flex items-baseline space-x-4">
                       {navigation.map((item) => (
@@ -29,8 +31,8 @@ export default function Navigation() {
                           className={classNames(
                             item.current
                               ? "bg-gray-900 text-dark  "
-                              : "text-gray-300 hover:bg-gray-700 hover:text-dark  ",
-                            "px-3 py-2 rounded-md text-sm font-medium"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-dark",
+                            "px-3 py-2 rounded-md text-base font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}
                         >
@@ -41,14 +43,10 @@ export default function Navigation() {
                   </div>
                 </div>
                 <div className="hidden md:block">
-                  <div className="ml-4 flex items-center md:ml-6">
-                    <button
-                      type="button"
-                      className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                    >
-                      <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
+                  <div className="ml-4 flex space-x-6 items-center md:ml-6">
+                    <SearchBar />
+                    <Button text="Upload" tranparent={false} />
+                    <Button text="Connect Wallet" tranparent={true} />
                   </div>
                 </div>
                 <div className="-mr-2 flex md:hidden">

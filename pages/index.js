@@ -1,9 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
+import About from "../components/About";
+import Banner from "../components/Banner";
+import CreatNSell from "../components/CreatNSell";
+import Features from "../components/Features";
+import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import NftStates from "../components/NftStates";
 export default function Home() {
   return (
-    <div className="max-w-8xl mx-20 px-4">
+    <div className="">
       <Head>
         <title>NFT-playground</title>
         <meta
@@ -13,20 +18,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navigation />
-
       {/* BannerHeading */}
-
+      <Banner />
       {/* About section */}
-
+      <About />
       {/* NFT states */}
-
+      <NftStates />
       {/* Featured Collection */}
-
+      <Features />
       {/* Create and sell sections */}
-
+      <CreatNSell />
       {/* Discover More Sections */}
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 }
