@@ -134,13 +134,13 @@ const NftStates = () => {
         </section>
         {/* top cards */}
         <section className="md:-ml-20">
-          <h2 className="text-h3 font-caps text-dark">Top Collections over </h2>
+          <h2 className="text-h4 md:text-h3 font-caps text-dark">Top Collections over </h2>
           <h4 className="text-h5 text-indigo font-medium">Last 7 days </h4>
           <div className="mt-2">
             {topcollections.map((obj, i) => (
               <div
                 key={i}
-                className="relative w-[360px] border border-white hover:border hover:border-gray/20 my-0 p-2 hover:shadow-md rounded-lg cursor-pointer"
+                className="relative w-[300px] md:w-[360px] border border-white hover:border hover:border-gray/20 my-0 p-2 hover:shadow-md rounded-lg cursor-pointer"
               >
                 <div className="flex items-center space-x-4 ">
                   <h3 className="font-bold text-h4 mr-6">{obj.id}</h3>
@@ -159,11 +159,11 @@ const NftStates = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="absolute right-0 pr-8">
+                  <div className="absolute right-0  md:pr-8">
                     <h2
                       className={classNames(
                         i == 0 || i == 2 ? "text-lemon" : "text-red",
-                        " font-bold text-h4"
+                        " font-bold text-p md:text-h4"
                       )}
                     >
                       +{obj.percentage}%
