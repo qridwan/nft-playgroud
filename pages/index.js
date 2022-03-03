@@ -2,6 +2,7 @@ import Head from "next/head";
 import About from "../components/About";
 import Banner from "../components/Banner";
 import CreatNSell from "../components/CreatNSell";
+import DiscoverMore from "../components/DiscoverMore";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
@@ -29,7 +30,7 @@ export default function Home() {
       {/* Create and sell sections */}
       <CreatNSell />
       {/* Discover More Sections */}
-
+      <DiscoverMore />
       {/* Footer */}
       <Footer />
     </div>

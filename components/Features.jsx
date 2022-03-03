@@ -32,9 +32,8 @@ const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8  m-auto md:m-0">
           {feats.map((obj) => (
-            <div key={obj.title} className="md:w-[400px] my-4 md:my-0">
-              <Img height={350} width={400} className="" src={obj.src} />
-
+            <div key={obj.title} className="w-350 md:w-[400px] my-4 md:my-0">
+              <Img height={300} width={350} className="" src={obj.src} />
               <h4 className="text-p font-bold my-2">{obj.title}</h4>
               <div className="flex justify-between">
                 <div className="flex items-center">
